@@ -1,6 +1,7 @@
 package com.kavita.quiztest.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -32,6 +33,9 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
 
     private List<ListGroup> groupItems;
     private Context context;
+    int color1 = Color.parseColor("#EF5350");
+    int color2 = Color.parseColor("#CE93D8");
+    int color3 = Color.parseColor("#00E676");
 
     public GroupAdapter(Context context, List<ListGroup> groupItems) {
         this.groupItems = groupItems;
@@ -49,6 +53,15 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         ListGroup groupItem = groupItems.get(position);
         holder.name.setText(groupItem.getGroup_name());
+        if (position == 0) {
+            holder.cardView.setCardBackgroundColor(color1);
+        }
+        if (position == 1) {
+            holder.cardView.setCardBackgroundColor(color2);
+        }if (position == 2) {
+            holder.cardView.setCardBackgroundColor(color3);
+        }
+
         RequestOptions options = new RequestOptions()
                 .centerCrop()
                 .placeholder(R.mipmap.ic_launcher_round)
