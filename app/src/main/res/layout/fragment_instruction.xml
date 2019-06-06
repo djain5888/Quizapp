@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_200"
+    android:background="@drawable/gradientblue"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context="UI.Activities.MainActivity">
@@ -13,66 +13,83 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+    <android.support.v7.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/inscard"
 
+        android:foregroundGravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="25dp"
+        app:cardCornerRadius="25dp">
         <TextView
             android:id="@+id/website_instruction"
             android:layout_width="match_parent"
-            android:layout_height="39dp"
-            android:layout_margin="20dp"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
             android:gravity="center"
+
             android:text="INSTRUCTIONS:"
-            android:textColor="@color/orange_400"
-            android:textSize="20sp"
-            android:textStyle="bold"
-           />
+            android:textColor="@color/blue_800"
+
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/website_instruction"
+            android:layout_below="@+id/inscard"
             android:layout_marginTop="25dp"
-            android:elevation="25dp"
-            app:cardCornerRadius="5dp"
-
+            android:elevation="50dp"
+            app:cardCornerRadius="25dp"
+            android:id="@+id/card"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             android:layout_marginBottom="25dp"
-            android:padding="2dp">
+            android:padding="25dp">
 
             <TextView
                 android:id="@+id/detail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:background="@drawable/text_gradient"
+                android:background="@color/colorTransparentWhite"
                 android:padding="25dp"
 
                 android:text=" 1.Total Questions = 50.\n\n2.Each question carries 1 mark.\n\n3.Each test is of 50 marks, 1 marks per each question.\n\n 4.Multiple choice questions with only
 ONE valid answer.\n\n5.Click on the arrow button to load the
 next question.\n\n6.Your score and ratings will be
      displayed at the end of the test!."
-                android:textColor="@color/white"
+                android:textColor="@color/blue_800"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="italic" />
         </android.support.v7.widget.CardView>
 
 
         <Button
             android:id="@+id/insdash"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="170dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="155dp"
-            android:background="@drawable/gradient"
+            android:layout_height="72dp"
+            android:layout_below="@+id/card"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="88dp"
+
+            android:elevation="55dp"
+
             android:text="Go To Dashboard"
-            android:textColor="#ffffff"
-            android:textSize="10sp"
+            android:textColor="@color/blue_50"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
 
