@@ -33,8 +33,8 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
 
     private List<ListGroup> groupItems;
     private Context context;
-    int color1 = Color.parseColor("#F44336");
-    int color2 = Color.parseColor("#1565C0");
+    int color1 = Color.parseColor("#EF5350");
+    int color2 = Color.parseColor("#CE93D8");
     int color3 = Color.parseColor("#00E676");
 
     public GroupAdapter(Context context, List<ListGroup> groupItems) {
