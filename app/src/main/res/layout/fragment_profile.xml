@@ -113,7 +113,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
-        android:background="@color/red_500"
+        android:background="@drawable/bubble1"
         android:paddingLeft="10sp"
         android:paddingRight="10sp"
         android:text="Go To Dashboard"
