@@ -3,6 +3,7 @@ package com.kavita.quiztest.UI.Activities;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -54,6 +55,9 @@ public class RegisterActivity extends AppCompatActivity {
         editTextconfirmpassword = findViewById(R.id.confirmpassword);
         editTextemail = findViewById(R.id.Email);
         pd = new ProgressDialog(this);
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Regular.ttf");
+        textViewregister.setTypeface(custom_font);
         
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
