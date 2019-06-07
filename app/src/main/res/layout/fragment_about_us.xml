@@ -59,7 +59,7 @@
                     android:textColor="@color/blue_700"
                     android:textSize="20sp"
                     android:gravity="center"
-                    android:paddingRight="20dp"
+                    android:paddingRight="10dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -67,6 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:text="support@iniestawebtech.com"
                     android:textColor="@color/blue_700"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -109,6 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:text="7408405853 / 7905829756"
                     android:textColor="@color/blue_700"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -148,11 +150,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/aboutus"
+                    android:id="@+id/urllink"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textColor="@color/blue_700"
+                    android:text="http://iniestawebtech.com "
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -166,7 +169,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_profile"
+        android:id="@+id/aboutusdash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
