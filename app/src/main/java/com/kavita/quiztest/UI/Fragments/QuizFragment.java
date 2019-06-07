@@ -28,7 +28,6 @@ import com.kavita.quiztest.Helpers.Url;
 import com.kavita.quiztest.Models.ListQues;
 import com.kavita.quiztest.R;
 import com.kavita.quiztest.UI.Activities.MainActivity;
-import com.kavita.quiztest.UI.Activities.OnBackPressed;
 
 import org.jetbrains.annotations.Contract;
 import org.json.JSONArray;
