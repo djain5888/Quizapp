@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -78,6 +79,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ImageView userimage = hView.findViewById(R.id.textimageview);
         TextView nameview = hView.findViewById(R.id.nav_name);
         TextView emailview = hView.findViewById(R.id.nav_email);
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Regular.ttf");
+        nameview.setTypeface(custom_font);
+        emailview.setTypeface(custom_font);
+
         nameview.setText(name);
         emailview.setText(email);
         userimage.setImageDrawable(drawable);

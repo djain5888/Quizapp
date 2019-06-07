@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -63,6 +64,8 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.login);
         textView2 = findViewById(R.id.textViewLogin);
 
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Regular.ttf");
+        textView2.setTypeface(custom_font);
 
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,6 +2,7 @@ package com.kavita.quiztest.UI.Activities;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
@@ -31,6 +32,9 @@ public class SplashActivity extends AppCompatActivity {
         logo = findViewById(R.id.logo);
         logo1= findViewById(R.id.logo1);
         tv = findViewById(R.id.tv);
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Regular.ttf");
+        tv.setTypeface(custom_font);
 
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.transistion);
         tv.startAnimation(animation);
