@@ -15,7 +15,7 @@ import com.kavita.quiztest.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    ImageView logo;
+    ImageView logo,logo1;
     TextView tv;
 
     @Override
@@ -29,11 +29,13 @@ public class SplashActivity extends AppCompatActivity {
 
 
         logo = findViewById(R.id.logo);
+        logo1= findViewById(R.id.logo1);
         tv = findViewById(R.id.tv);
 
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.transistion);
         tv.startAnimation(animation);
         logo.startAnimation(animation);
+        logo1.startAnimation(animation);
         final Intent i = new Intent(this,LoginActivity.class);
 
         Thread timer = new Thread(){
