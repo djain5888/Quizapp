@@ -33,6 +33,9 @@ import com.kavita.quiztest.UI.Fragments.DashboardFragment;
 import com.kavita.quiztest.UI.Fragments.FeedbackFragment;
 import com.kavita.quiztest.UI.Fragments.InstructionFragment;
 import com.kavita.quiztest.UI.Fragments.ProfileFragment;
+import com.kavita.quiztest.UI.Fragments.QuizFragment;
+
+import java.util.List;
 
 import java.util.Random;
 
@@ -192,40 +195,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     boolean doubleBackToExitPressedOnce = false;
 
-//    @Override
-//    public void onBackPressed() {
-//        if (doubleBackToExitPressedOnce) {
-//            AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-//            alert.setMessage("Are you sure?")
-//                    .setPositiveButton("Logout", new DialogInterface.OnClickListener() {
-//
-//                        public void onClick(DialogInterface dialog, int which) {
-//
-//                            logout(); // Last step. Logout function
-//
-//                        }
-//                    }).setNegativeButton("Cancel", null);
-//
-//            AlertDialog alert1 = alert.create();
-//            alert1.show();
-//
-//            //super.onBackPressed();
-//            return;
-//        }
-//
-//        this.doubleBackToExitPressedOnce = true;
-//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-//
-//        new Handler().postDelayed(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//
-//                doubleBackToExitPressedOnce = false;
-//            }
-//        }, 2000);
-//    }
-    // @Override
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
+    }
+
     /**  public void onBackPressed() {
 
 
@@ -238,4 +228,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      }
      }  **/
 
-}// 	#24B574
+
+
+        }
+
+
+//	#24B574

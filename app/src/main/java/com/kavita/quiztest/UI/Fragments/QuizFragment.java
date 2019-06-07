@@ -1,5 +1,6 @@
 package com.kavita.quiztest.UI.Fragments;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -25,6 +27,8 @@ import com.kavita.quiztest.Helpers.JsonSingleton;
 import com.kavita.quiztest.Helpers.Url;
 import com.kavita.quiztest.Models.ListQues;
 import com.kavita.quiztest.R;
+import com.kavita.quiztest.UI.Activities.MainActivity;
+import com.kavita.quiztest.UI.Activities.OnBackPressed;
 
 import org.jetbrains.annotations.Contract;
 import org.json.JSONArray;
@@ -36,7 +40,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class QuizFragment extends Fragment {
+public class QuizFragment extends Fragment  {
 
     private final String TAG = getClass().getSimpleName();
     String gid, test_id, correct_ans, test_marks;
@@ -286,5 +290,6 @@ public class QuizFragment extends Fragment {
             Log.d(TAG, "getScore: " + score);
         }
     }
+
 
 }
