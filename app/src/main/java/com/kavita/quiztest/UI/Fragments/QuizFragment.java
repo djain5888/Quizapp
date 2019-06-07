@@ -54,7 +54,8 @@ public class QuizFragment extends Fragment {
     private float score;
 
 
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState)
+    {
         view = inflater.inflate(R.layout.fragment_quiz, container, false);
 
         question_count = view.findViewById(R.id.text_view_question_count);
@@ -150,6 +151,7 @@ public class QuizFragment extends Fragment {
 
         return view;
     }
+
 
     private void showPopup() {
         android.app.AlertDialog.Builder alert = new android.app.AlertDialog.Builder(getActivity());
@@ -284,4 +286,5 @@ public class QuizFragment extends Fragment {
             Log.d(TAG, "getScore: " + score);
         }
     }
+
 }
