@@ -194,6 +194,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void logout() {
+        SharedPreferences sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("email", "");
+        editor.putString("name", "");
+        editor.apply();
         startActivity(new Intent(this, LoginActivity.class));
         finish();
     }

@@ -1,6 +1,8 @@
 package com.kavita.quiztest.UI.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +42,13 @@ public class SplashActivity extends AppCompatActivity {
         tv.startAnimation(animation);
         logo.startAnimation(animation);
         logo1.startAnimation(animation);
-        final Intent i = new Intent(this,LoginActivity.class);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+        final String email = sharedPreferences.getString("email", "");
+        final String name = sharedPreferences.getString("name", "");
+
+        final Intent loginIntent = new Intent(this,LoginActivity.class);
+        final Intent mainIntent = new Intent(this,MainActivity.class);
 
         Thread timer = new Thread(){
             public void run(){
@@ -50,7 +58,11 @@ public class SplashActivity extends AppCompatActivity {
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    startActivity(i);
+                    if (!email.isEmpty() && !name.isEmpty()){
+                        startActivity(mainIntent);
+                    }else {
+                        startActivity(loginIntent);
+                    }
                     finish();
 
                 }
