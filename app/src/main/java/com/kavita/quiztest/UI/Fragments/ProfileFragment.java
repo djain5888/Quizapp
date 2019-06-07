@@ -37,7 +37,7 @@ public class ProfileFragment extends Fragment {
         btn_profile = view.findViewById(R.id.btn_profile);
         getActivity().setTitle(this.TAG_PROFILE);
 
-        Log.d(TAG, "onCreateView: NAME" + mName);
+        Log.d(TAG, "onCreateView: NAME" + mName + " EMAIL: " + mEmail);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         email.setText(sharedPreferences.getString("email", ""));
         name.setText(sharedPreferences.getString("name", ""));
