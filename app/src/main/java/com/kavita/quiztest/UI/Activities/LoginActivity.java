@@ -130,7 +130,7 @@ public class LoginActivity extends AppCompatActivity {
         final ProgressDialog progress;
         progress = new ProgressDialog(this);
         progress.setTitle("Please Wait!!");
-        progress.setMessage("Loging In");
+        progress.setMessage("Logging In");
         progress.setCancelable(false);
         progress.show();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
