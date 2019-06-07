@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //random int generation
         Random random = new Random();
         int x = random.nextInt(2000);
-        //rndom color generation
+        //random color generation
         ColorGenerator generator = ColorGenerator.MATERIAL;
         int color = generator.getColor(x);
         //text drawable generation
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .endConfig().round();
         TextDrawable drawable = builder.build(String.valueOf(name.charAt(0)), color);
 
-        //inflating navigation header programatically
+        //inflating navigation header programmatically
         View hView =  navigationView.inflateHeaderView(R.layout.nav_header_main);
         ImageView userimage = hView.findViewById(R.id.textimageview);
         TextView nameview = hView.findViewById(R.id.nav_name);
