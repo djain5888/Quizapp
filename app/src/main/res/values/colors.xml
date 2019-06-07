@@ -16,6 +16,8 @@
     <color name="dotsSelected">#FF6D00</color>
     <color name="colorTransparentBlack">#66ffffff</color>
 
+    <color name="color_accha">#f44336</color>
+
     <color name="txtPrimary">#ffffff</color>
     <color name="primaryGray">#d1d1d1</color>
     <color name="txtSecondary">#000000</color>

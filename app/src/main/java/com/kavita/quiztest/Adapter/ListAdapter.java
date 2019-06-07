@@ -1,5 +1,6 @@
 package com.kavita.quiztest.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -43,18 +44,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull ListAdapter.ViewHolder holder, int position) {
         ListItem listItem = listItems.get(position);
         holder.tv.setText(listItem.getTest_name());
-        if(position%2==0)
-        {
-            holder.linearLayout.setBackgroundResource(R.drawable.text_gradient);
-        }
-        else
-        {
-            holder.linearLayout.setBackgroundResource(R.drawable.text_gradient1);
-        }
     }
 
     @Override

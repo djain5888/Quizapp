@@ -28,13 +28,12 @@
         android:id="@+id/recycler_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6"
         android:layout_gravity="center"
-        android:foregroundGravity="center"
         android:layout_margin="30dp"
-        android:layout_marginTop="50dp"
-        android:padding="10dp"
-        android:elevation="30dp" />
+        android:layout_weight="10"
+        android:elevation="30dp"
+        android:foregroundGravity="center"
+        />
 
     <!--<ImageView-->
         <!--android:id="@+id/image1"-->
