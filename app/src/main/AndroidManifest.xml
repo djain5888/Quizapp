@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.kavita.quiztest.UI.Activities.SplashActivity">
+        <activity android:name="com.kavita.quiztest.UI.Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.kavita.quiztest.UI.Activities.MainActivity"
+            android:name="com.kavita.quiztest.UI.Activities.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name="com.kavita.quiztest.UI.Activities.RegisterActivity" />
         <activity android:name="com.kavita.quiztest.UI.Activities.LoginActivity">
