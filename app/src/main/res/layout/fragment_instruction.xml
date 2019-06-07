@@ -26,7 +26,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_margin="25dp"
-        app:cardCornerRadius="25dp">
+        app:cardCornerRadius="5dp">
         <TextView
             android:id="@+id/website_instruction"
             android:layout_width="match_parent"
@@ -55,7 +55,7 @@
             android:layout_below="@+id/inscard"
             android:layout_marginTop="25dp"
             android:elevation="50dp"
-            app:cardCornerRadius="25dp"
+            app:cardCornerRadius="5dp"
             android:id="@+id/card"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
