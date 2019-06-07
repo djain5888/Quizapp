@@ -104,7 +104,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginBottom="15dp"
         app:cardCornerRadius="5dp"
-        android:layout_height="130dp"
+        android:layout_height="135dp"
         android:layout_below="@+id/question_card">
 
         <ScrollView
@@ -135,26 +135,27 @@
       android:elevation="20dp"
       android:layout_margin="5dp"
       android:id="@+id/ans"
-      android:layout_height="130dp">
+      android:layout_height="135dp">
       <ScrollView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
 
-          android:layout_marginTop="5dp">
+          android:layout_marginTop="0dp">
 
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:textAlignment="center"
-        android:padding="5dp"
+        android:padding="8dp"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true">
+       >
 
         <RadioButton
 
             android:id="@+id/radio_button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:textColor="@color/blue_900"
             android:text="Option 1" />
 
