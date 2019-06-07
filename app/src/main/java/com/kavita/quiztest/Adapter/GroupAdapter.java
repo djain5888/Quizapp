@@ -54,7 +54,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
         ListGroup groupItem = groupItems.get(position);
         holder.name.setText(groupItem.getGroup_name());
         if (position == 0) {
-            holder.cardView.setCardBackgroundColor(color1);
+            holder.cardView.setCardBackgroundColor(R.drawable.text_gradient);
         }
         if (position == 1) {
             holder.cardView.setCardBackgroundColor(color2);
