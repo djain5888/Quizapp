@@ -154,10 +154,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:textColor="@color/blue_900"
+                    android:textColor="@color/blue_200"
                     android:text="http://iniestawebtech.com "
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 
