@@ -160,6 +160,7 @@ public class LoginActivity extends AppCompatActivity {
                             //start intent
                             Log.i(TAG, "onResponse: Login" + "LoggedIN");
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            finish();
                         }
                     } else {
 

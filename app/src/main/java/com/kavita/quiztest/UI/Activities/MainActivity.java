@@ -1,8 +1,10 @@
 package com.kavita.quiztest.UI.Activities;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,16 +18,23 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.kavita.quiztest.R;
 import com.kavita.quiztest.UI.Fragments.AboutUsFragment;
 import com.kavita.quiztest.UI.Fragments.DashboardFragment;
 import com.kavita.quiztest.UI.Fragments.FeedbackFragment;
 import com.kavita.quiztest.UI.Fragments.InstructionFragment;
 import com.kavita.quiztest.UI.Fragments.ProfileFragment;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -42,6 +51,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+        String email = sharedPreferences.getString("email", "");
+        String name = sharedPreferences.getString("name", "");
+        if (name.isEmpty() || email.isEmpty()){
+            name = "User";
+            email = "user@gmail.com";
+        }
+
+        //random int generation
+        Random random = new Random();
+        int x = random.nextInt(2000);
+        //rndom color generation
+        ColorGenerator generator = ColorGenerator.MATERIAL;
+        int color = generator.getColor(x);
+        //text drawable generation
+        TextDrawable.IBuilder builder = TextDrawable.builder()
+                .beginConfig()
+                .withBorder(4)
+                .endConfig().round();
+        TextDrawable drawable = builder.build(String.valueOf(name.charAt(0)), color);
+
+        //inflating navigation header programatically
+        View hView =  navigationView.inflateHeaderView(R.layout.nav_header_main);
+        ImageView userimage = hView.findViewById(R.id.textimageview);
+        TextView nameview = hView.findViewById(R.id.nav_name);
+        TextView emailview = hView.findViewById(R.id.nav_email);
+        nameview.setText(name);
+        emailview.setText(email);
+        userimage.setImageDrawable(drawable);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -153,39 +192,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     boolean doubleBackToExitPressedOnce = false;
 
-    @Override
-    public void onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-            AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-            alert.setMessage("Are you sure?")
-                    .setPositiveButton("Logout", new DialogInterface.OnClickListener() {
-
-                        public void onClick(DialogInterface dialog, int which) {
-
-                            logout(); // Last step. Logout function
-
-                        }
-                    }).setNegativeButton("Cancel", null);
-
-            AlertDialog alert1 = alert.create();
-            alert1.show();
-
-            //super.onBackPressed();
-            return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-
-                doubleBackToExitPressedOnce = false;
-            }
-        }, 2000);
-    }
+//    @Override
+//    public void onBackPressed() {
+//        if (doubleBackToExitPressedOnce) {
+//            AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+//            alert.setMessage("Are you sure?")
+//                    .setPositiveButton("Logout", new DialogInterface.OnClickListener() {
+//
+//                        public void onClick(DialogInterface dialog, int which) {
+//
+//                            logout(); // Last step. Logout function
+//
+//                        }
+//                    }).setNegativeButton("Cancel", null);
+//
+//            AlertDialog alert1 = alert.create();
+//            alert1.show();
+//
+//            //super.onBackPressed();
+//            return;
+//        }
+//
+//        this.doubleBackToExitPressedOnce = true;
+//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+//
+//        new Handler().postDelayed(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//
+//                doubleBackToExitPressedOnce = false;
+//            }
+//        }, 2000);
+//    }
     // @Override
     /**  public void onBackPressed() {
 

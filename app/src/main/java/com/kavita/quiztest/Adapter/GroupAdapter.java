@@ -33,9 +33,9 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
 
     private List<ListGroup> groupItems;
     private Context context;
-    int color1 = Color.parseColor("#EF5350");
-    int color2 = Color.parseColor("#CE93D8");
-    int color3 = Color.parseColor("#00E676");
+    private int color1 = Color.parseColor("#CE93D8");
+    private int color2 = Color.parseColor("#FF6F00");
+    private int color3 = Color.parseColor("#00E676");
 
     public GroupAdapter(Context context, List<ListGroup> groupItems) {
         this.groupItems = groupItems;
@@ -54,7 +54,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
         ListGroup groupItem = groupItems.get(position);
         holder.name.setText(groupItem.getGroup_name());
         if (position == 0) {
-            holder.cardView.setCardBackgroundColor(R.drawable.text_gradient);
+            holder.cardView.setCardBackgroundColor(color1);
         }
         if (position == 1) {
             holder.cardView.setCardBackgroundColor(color2);
