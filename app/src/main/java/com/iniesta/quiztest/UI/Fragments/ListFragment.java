@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -52,7 +53,7 @@ public class ListFragment extends Fragment {
         gid = getArguments().getString("gid");
         Log.d(TAG, "onCreateView: ListFragment" + gid);
         recyclerView = view.findViewById(R.id.recycler_list);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
         cardView = view.findViewById(R.id.group_card);
         doInBackground();
         return view;
