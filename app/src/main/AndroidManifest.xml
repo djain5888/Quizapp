@@ -9,11 +9,12 @@
         android:allowBackup="true"
         android:icon="@drawable/logooo1"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:roundIcon="@drawable/logooo1"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="com.iniesta.quiztest.UI.Activities.SplashActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".UI.Activities.Register1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,12 +22,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.iniesta.quiztest.UI.Activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="com.iniesta.quiztest.UI.Activities.RegisterActivity" />
-        <activity android:name="com.iniesta.quiztest.UI.Activities.LoginActivity">
-        </activity>
+            android:name=".UI.Activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UI.Activities.RegisterActivity" />
+        <activity android:name=".UI.Activities.LoginActivity" />
 
+        <meta-data
+            android:name="sendotp.key"
+            android:value="@string/sendotp_key" />
     </application>
 
 </manifest>

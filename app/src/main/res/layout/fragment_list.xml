@@ -30,11 +30,7 @@
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_margin="8dp"
-        android:layout_weight="10"
-        android:padding="2dp"
-
-
-        />
+        android:layout_weight="10"/>
 
     <!--<ImageView-->
         <!--android:id="@+id/image1"-->
