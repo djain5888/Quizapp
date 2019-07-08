@@ -26,8 +26,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="543dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_below="@+id/ImageView"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
@@ -62,95 +62,74 @@
             android:inputType="textPersonName"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            android:textSize="20dp"
+            android:textSize="20dp" />
 
-            />
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="25dp"
             android:layout_weight="0.75"
-            android:orientation="horizontal">
+            android:background="@drawable/bubble">
 
 
             <EditText
                 android:id="@+id/mobile"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/username"
-                android:layout_alignStart="@+id/username"
-                android:layout_alignLeft="@+id/username"
                 android:layout_gravity="center"
                 android:gravity="center"
-
-
-                android:layout_weight="1"
                 android:background="@drawable/bubble"
                 android:drawableLeft="@drawable/ic_action_mobile0"
                 android:ems="10"
-
-
-
                 android:hint="Mobile Number"
-
-
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/verify"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="4dp"
-                android:layout_weight="0.14"
-                android:background="@drawable/bubble1"
-
+                android:padding="5dp"
                 android:gravity="center"
-                android:text="Send otp"
-                android:textColor="@color/white"
+                android:text="Send Otp"
+                android:layout_alignRight="@id/mobile"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
-        </LinearLayout>
+        </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="25dp"
         android:layout_weight="0.75"
-        android:orientation="horizontal">
+        android:background="@drawable/bubble">
 
         <EditText
             android:id="@+id/otp"
-            android:layout_width="217dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:layout_gravity="center"
-            android:layout_weight="0.75"
-
             android:background="@drawable/bubble"
             android:drawableLeft="@drawable/ic_action_otp"
             android:ems="10"
             android:gravity="center"
-
-
             android:hint="OTP"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/verifyotp"
-            android:layout_width="0dp"
-            android:background="@drawable/bubble1"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.75"
+            android:layout_alignRight="@id/otp"
             android:text="Verify OTP"
-            android:layout_marginTop="4dp"
+            android:padding="5dp"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
-    </LinearLayout>
+            android:textColor="@color/colorAccent"/>
+    </RelativeLayout>
 
 
         <EditText

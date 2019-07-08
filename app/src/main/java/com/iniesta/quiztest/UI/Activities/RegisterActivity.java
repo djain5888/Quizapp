@@ -119,7 +119,7 @@ public class RegisterActivity extends AppCompatActivity {
         verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //verify.setTextColor(getResources().getColor(R.color.red_600));
+                verify.setTextColor(getResources().getColor(R.color.green_500));
                 String number = editTextemail.getText().toString();
                 number="+91"+number;
                 sendVerificationCode(number);
@@ -131,7 +131,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-            //verifyotp.setTextColor(getResources().getColor(R.color.red_600));
+            verifyotp.setTextColor(getResources().getColor(R.color.green_500));
 
 //                if (code.isEmpty() || code.length() < 6) {
 //
