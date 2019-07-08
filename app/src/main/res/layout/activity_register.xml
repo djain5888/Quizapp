@@ -46,17 +46,18 @@
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_below="@+id/ImageView"
             android:layout_height="0dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
             android:layout_gravity="center"
+            android:layout_margin="25dp"
             android:gravity="center"
             android:background="@drawable/bubble"
             android:drawableLeft="@drawable/ic_action_user"
             android:ems="10"
-            android:layout_weight="1"
+            android:layout_weight="0.75"
             android:hint="Username"
             android:inputType="textPersonName"
             android:textColor="#ffffff"
@@ -65,62 +66,109 @@
 
             />
 
-        <EditText
-            android:id="@+id/Email"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@+id/username"
-            android:layout_alignStart="@+id/username"
-            android:layout_alignLeft="@+id/username"
-            android:layout_marginTop="35dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/bubble"
-            android:drawableLeft="@drawable/ic_action_email"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="textPersonName"
+            android:layout_margin="25dp"
+            android:layout_weight="0.75"
+            android:orientation="horizontal">
 
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/username"
+                android:layout_alignStart="@+id/username"
+                android:layout_alignLeft="@+id/username"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+
+                android:layout_weight="1"
+                android:background="@drawable/bubble"
+                android:drawableLeft="@drawable/ic_action_mobile0"
+                android:ems="10"
+
+
+
+                android:hint="Mobile Number"
+
+
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/verify"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_weight="0.14"
+                android:background="@drawable/bubble1"
+
+                android:gravity="center"
+                android:text="Send otp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="25dp"
+        android:layout_weight="0.75"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/otp"
+            android:layout_width="217dp"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:layout_weight="0.75"
+
+            android:background="@drawable/bubble"
+            android:drawableLeft="@drawable/ic_action_otp"
+            android:ems="10"
+            android:gravity="center"
+
+
+            android:hint="OTP"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
             android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/Password"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_below="@+id/Email"
-            android:layout_alignStart="@+id/Email"
-            android:layout_alignLeft="@+id/Email"
-            android:layout_gravity="center"
+        <TextView
+            android:id="@+id/verifyotp"
+            android:layout_width="0dp"
+            android:background="@drawable/bubble1"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:text="Verify OTP"
+            android:layout_marginTop="4dp"
             android:gravity="center"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/bubble"
-            android:drawableLeft="@drawable/ic_action_pass"
-            android:ems="10"
-            android:hint="Password"
-            android:layout_weight="1"
-            android:inputType="textPassword"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:textSize="20dp" />
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
 
         <EditText
-            android:id="@+id/confirmpassword"
-            android:layout_width="wrap_content"
+            android:id="@+id/password"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_below="@+id/Password"
             android:layout_alignStart="@+id/Password"
             android:layout_alignLeft="@+id/Password"
             android:layout_gravity="center"
             android:layout_marginTop="35dp"
-            android:layout_weight="1"
+            android:layout_weight="0.75"
+            android:layout_margin="25dp"
             android:background="@drawable/bubble"
             android:drawableLeft="@drawable/ic_action_pass"
             android:ems="10"
             android:gravity="center"
-            android:hint="Confirm Password"
+            android:hint="Password"
             android:inputType="textPassword"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
@@ -140,7 +188,8 @@
             android:layout_marginTop="50dp"
             android:elevation="10dp"
             app:cardBackgroundColor="@color/colorAccent"
-            app:cardCornerRadius="25dp">
+            app:cardCornerRadius="25dp"
+            android:visibility="invisible">
 
             <RelativeLayout
                 android:layout_width="match_parent"

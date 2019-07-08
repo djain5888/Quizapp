@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
         SharedPref.init(getApplicationContext());
-        Email = findViewById(R.id.email);
+        Email = findViewById(R.id.mobile);
         Password = findViewById(R.id.password);
         login = findViewById(R.id.login);
         textView2 = findViewById(R.id.textViewLogin);

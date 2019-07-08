@@ -48,7 +48,7 @@ public class Register1 extends AppCompatActivity {
                 //     user action.
                 Log.d(TAG, "onVerificationCompleted:" + credential);
 
-                signInWithPhoneAuthCredential(credential);
+
             }
 
             @Override
@@ -99,6 +99,8 @@ public class Register1 extends AppCompatActivity {
     {
         String a=otp.getText().toString();
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, a);
+        signInWithPhoneAuthCredential(credential);
+      //  signInWithPhoneAuthCredential();
 
     }
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
